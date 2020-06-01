@@ -7,6 +7,14 @@ class ProductPage(BasePage):
         price = self.browser.find_element(*ProductPageLocators.PRICE).text
         name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         self.click_button_add_to_basket()
+        self.check_text_in_alert(name, "product name check")
+        self.check_text_in_alert(price, "product price check")
+
+    def add_to_basket_quiz(self):
+        self.should_be_button_add_basket()
+        price = self.browser.find_element(*ProductPageLocators.PRICE).text
+        name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
+        self.click_button_add_to_basket()
         self.solve_quiz_and_get_code()
         self.check_text_in_alert(name, "product name check")
         self.check_text_in_alert(price, "product price check")
