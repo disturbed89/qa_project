@@ -14,3 +14,10 @@ class LoginPageLocators():
     REGISTRATION_PASSWORD1 = (By.CSS_SELECTOR, "#id_registration-password1")
     REGISTRATION_PASSWORD2 = (By.CSS_SELECTOR, "#id_registration-password2")
     REGISTRATION_BUTTON = (By.CSS_SELECTOR, "[name='registration_submit']")
+
+class ProductPageLocators():
+    BUTTON_ADD_BASKET = (By.CLASS_NAME, "btn-add-to-basket")
+    PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
+    PRICE = (By.CLASS_NAME, "price_color")
+    RES_BASKET = (By.CSS_SELECTOR, ".alertinner strong")
+    
