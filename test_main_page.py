@@ -21,7 +21,7 @@ class TestLoginFromMainPage():
         page.should_be_login_link()
 
 # Проверка пустоты корзины при переходе с главной страницы
-@pytest.mark.basket_from_main_page
+@pytest.mark.basket_guest
 class TestEmptyBasketFromMainPage():
     def test_guest_cant_see_product_in_basket_opened_from_main_page(self, browser):
         page = MainPage(browser, link)   
