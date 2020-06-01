@@ -1,4 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException
+import time
 
 class BasePage():
     def __init__(self, browser, url, timeout=10):
@@ -8,6 +9,7 @@ class BasePage():
 
     def open(self): 
         self.browser.get(self.url)
+        #time.sleep(5) 
 
     def is_element_present(self, how, what):
         try:
